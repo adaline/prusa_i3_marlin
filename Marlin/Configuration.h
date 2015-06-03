@@ -379,8 +379,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
     // set the rectangle in which to probe
     #define LEFT_PROBE_BED_POSITION 10
-    #define RIGHT_PROBE_BED_POSITION 150
-    #define BACK_PROBE_BED_POSITION 150
+    #define RIGHT_PROBE_BED_POSITION 180
+    #define BACK_PROBE_BED_POSITION 180
     #define FRONT_PROBE_BED_POSITION 10
 
      // set the number of grid points per dimension
@@ -406,14 +406,14 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
   // X and Y offsets must be integers
   #define X_PROBE_OFFSET_FROM_EXTRUDER 0
   #define Y_PROBE_OFFSET_FROM_EXTRUDER 0
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER 1
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER 0.8
 
-  #define Z_RAISE_BEFORE_HOMING 4       // (in mm) Raise Z before homing (G28) for Probe Clearance.
+  #define Z_RAISE_BEFORE_HOMING 1       // (in mm) Raise Z before homing (G28) for Probe Clearance.
                                         // Be sure you have this distance over your Z_MAX_POS in case
 
   #define XY_TRAVEL_SPEED 6000         // X and Y axis travel speed between probes, in mm/min
 
-  #define Z_RAISE_BEFORE_PROBING 15    //How much the extruder will be raised before traveling to the first probing point.
+  #define Z_RAISE_BEFORE_PROBING 5    //How much the extruder will be raised before traveling to the first probing point.
   #define Z_RAISE_BETWEEN_PROBINGS 5  //How much the extruder will be raised when traveling from between next probing points
 
   //#define Z_PROBE_SLED // turn on if you have a z-probe mounted on a sled like those designed by Charles Bell
@@ -477,7 +477,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // For deltabots this means top and center of the Cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 0
+#define MANUAL_Z_HOME_POS -0.6
 //#define MANUAL_Z_HOME_POS 402 // For delta: Distance between nozzle and print surface after homing.
 
 //// MOVEMENT SETTINGS
@@ -489,7 +489,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   {78.7402,78.7402,200.0*8/3,760*1.1}  // default steps per unit for Ultimaker
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,80.0,4000.0,700}  // default steps per unit for i3
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,78.7402,2560.0,750.0}  // default steps per unit for ORD bot
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 1, 25}    // (mm/sec)
+#define DEFAULT_MAX_FEEDRATE          {500, 500, 3, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {2500,2500,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          2000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
