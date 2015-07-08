@@ -25,7 +25,6 @@
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
 #define STRING_VERSION "v1.0.2"
-#define STRING_URL "reprap.org"
 #define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ // build date and time
 #define STRING_CONFIG_H_AUTHOR "(none, default config)" // Who made the changes.
 #define STRING_SPLASH STRING_VERSION " - " STRING_URL // will be shown during bootup
@@ -379,7 +378,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
     // set the rectangle in which to probe
     #define LEFT_PROBE_BED_POSITION 10
-    #define RIGHT_PROBE_BED_POSITION 120
+    #define RIGHT_PROBE_BED_POSITION 100
     #define BACK_PROBE_BED_POSITION 180
     #define FRONT_PROBE_BED_POSITION 10
 
@@ -396,7 +395,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
       #define ABL_PROBE_PT_1_Y 180
       #define ABL_PROBE_PT_2_X 15
       #define ABL_PROBE_PT_2_Y 20
-      #define ABL_PROBE_PT_3_X 150
+      #define ABL_PROBE_PT_3_X 100
       #define ABL_PROBE_PT_3_Y 20
 
   #endif // AUTO_BED_LEVELING_GRID
@@ -411,7 +410,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
   #define Z_RAISE_BEFORE_HOMING 1       // (in mm) Raise Z before homing (G28) for Probe Clearance.
                                         // Be sure you have this distance over your Z_MAX_POS in case
 
-  #define XY_TRAVEL_SPEED 6000         // X and Y axis travel speed between probes, in mm/min
+  #define XY_TRAVEL_SPEED 8000         // X and Y axis travel speed between probes, in mm/min
 
   #define Z_RAISE_BEFORE_PROBING 5    //How much the extruder will be raised before traveling to the first probing point.
   #define Z_RAISE_BETWEEN_PROBINGS 5  //How much the extruder will be raised when traveling from between next probing points
@@ -490,10 +489,10 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,80.0,4000.0,700}  // default steps per unit for i3
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,78.7402,2560.0,750.0}  // default steps per unit for ORD bot
 #define DEFAULT_MAX_FEEDRATE          {500, 500, 3, 25}    // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {2500,2500,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_ACCELERATION          2000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  1000   // X, Y, Z and E max acceleration in mm/s^2 for retracts
+#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  3000   // X, Y, Z and E max acceleration in mm/s^2 for retracts
 
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
@@ -514,7 +513,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define CUSTOM_M_CODES
 #ifdef CUSTOM_M_CODES
   #define CUSTOM_M_CODE_SET_Z_PROBE_OFFSET 851
-  #define Z_PROBE_OFFSET_RANGE_MIN -5
+  #define Z_PROBE_OFFSET_RANGE_MIN -15
   #define Z_PROBE_OFFSET_RANGE_MAX -5
 #endif
 
