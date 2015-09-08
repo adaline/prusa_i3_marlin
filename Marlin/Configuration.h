@@ -379,7 +379,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
     // set the rectangle in which to probe
     #define LEFT_PROBE_BED_POSITION 25
     #define RIGHT_PROBE_BED_POSITION 180
-    #define BACK_PROBE_BED_POSITION 180
+    #define BACK_PROBE_BED_POSITION 190
     #define FRONT_PROBE_BED_POSITION 20
 
      // set the number of grid points per dimension
