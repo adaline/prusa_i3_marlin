@@ -55,16 +55,16 @@
 //
 // Servos
 //
-#ifdef IS_RAMPS_13
-  #define SERVO0_PIN        7 // RAMPS_13 // Will conflict with BTN_EN2 on LCD_I2C_VIKI
-#else
-  #define SERVO0_PIN       11
-#endif
-#define SERVO1_PIN          6
-#define SERVO2_PIN          5
-#ifndef SERVO3_PIN
-  #define SERVO3_PIN        4
-#endif
+//#ifdef IS_RAMPS_13
+//  #define SERVO0_PIN        7 // RAMPS_13 // Will conflict with BTN_EN2 on LCD_I2C_VIKI
+//#else
+//  #define SERVO0_PIN       11
+//#endif
+//#define SERVO1_PIN          6
+//#define SERVO2_PIN          5
+//#ifndef SERVO3_PIN
+//  #define SERVO3_PIN        4
+//#endif
 
 //
 // Limit Switches
@@ -91,22 +91,22 @@
 #define X_STEP_PIN         54
 #define X_DIR_PIN          55
 #define X_ENABLE_PIN       38
-#define X_CS_PIN           53
+#define X_CS_PIN           11 // Servo 1
 
 #define Y_STEP_PIN         60
 #define Y_DIR_PIN          61
 #define Y_ENABLE_PIN       56
-#define Y_CS_PIN           49
+#define Y_CS_PIN           6 // Servo 2
 
 #define Z_STEP_PIN         46
 #define Z_DIR_PIN          48
 #define Z_ENABLE_PIN       62
-#define Z_CS_PIN           40
+#define Z_CS_PIN           5
 
 #define E0_STEP_PIN        26
 #define E0_DIR_PIN         28
 #define E0_ENABLE_PIN      24
-#define E0_CS_PIN          42
+#define E0_CS_PIN          4
 
 #define E1_STEP_PIN        36
 #define E1_DIR_PIN         34
