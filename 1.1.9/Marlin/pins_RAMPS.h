@@ -85,6 +85,12 @@
   #define Z_MIN_PROBE_PIN  32
 #endif
 
+// Val's TMC2130 hackaround
+#define X_CS_PIN           11
+#define Y_CS_PIN           6
+#define Z_CS_PIN           5
+#define E0_CS_PIN          4
+
 //
 // Steppers
 //

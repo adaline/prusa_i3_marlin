@@ -37,12 +37,6 @@
   #define BOARD_NAME "RAMPS 1.3"
 #endif
 
-// Val's TMC2130 hackaround
-#define X_CS_PIN           11
-#define Y_CS_PIN           6
-#define Z_CS_PIN           5
-#define E0_CS_PIN          4
-
 
 #define IS_RAMPS_13
 #include "pins_RAMPS.h"
