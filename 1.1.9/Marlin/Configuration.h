@@ -124,7 +124,7 @@
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+  #define MOTHERBOARD BOARD_EINSY_RAMBO
 #endif
 
 // Optional custom name for your RepStrap or other custom machine
@@ -373,9 +373,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // E3D v6
-  #define DEFAULT_Kp 41.25
-  #define DEFAULT_Ki 5.19
-  #define DEFAULT_Kd 81.94
+  #define DEFAULT_Kp 21
+  #define DEFAULT_Ki 1.5
+  #define DEFAULT_Kd 72
 
   // Ultimaker
   // #define DEFAULT_Kp 22.2
@@ -509,11 +509,11 @@
 // Specify here all the endstop connectors that are connected to any endstop or probe.
 // Almost all printers will be using one per axis. Probes will use one or more of the
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
-#define USE_XMIN_PLUG
-#define USE_YMIN_PLUG
+// #define USE_XMIN_PLUG
+// #define USE_YMIN_PLUG
 #define USE_ZMIN_PLUG
-//#define USE_XMAX_PLUG
-//#define USE_YMAX_PLUG
+#define USE_XMAX_PLUG
+#define USE_YMAX_PLUG
 //#define USE_ZMAX_PLUG
 
 // Enable pullup for all endstops to prevent a floating state
@@ -780,7 +780,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 25  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.22   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.55   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 30
@@ -874,8 +874,8 @@
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
-#define X_HOME_DIR -1
-#define Y_HOME_DIR -1
+#define X_HOME_DIR 1
+#define Y_HOME_DIR 1
 #define Z_HOME_DIR -1
 
 // @section machine
@@ -1445,7 +1445,7 @@
  *
  * Use CRC checks and retries on the SD communication.
  */
-//#define SD_CHECK_AND_RETRY
+#define SD_CHECK_AND_RETRY
 
 /**
  * LCD Menu Items
@@ -1485,7 +1485,7 @@
 //
 //  Set this option if CLOCKWISE causes values to DECREASE
 //
-#define REVERSE_ENCODER_DIRECTION
+// #define REVERSE_ENCODER_DIRECTION
 
 //
 // This option reverses the encoder direction for navigating LCD menus.
@@ -1493,7 +1493,7 @@
 //  If CLOCKWISE normally moves DOWN this makes it go UP.
 //  If CLOCKWISE normally moves UP this makes it go DOWN.
 //
-#define REVERSE_MENU_DIRECTION
+// #define REVERSE_MENU_DIRECTION
 
 //
 // Individual Axis Homing
@@ -1659,6 +1659,9 @@
 // http://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
 #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+  #define ST7920_DELAY_1 DELAY_NS(0)
+  #define ST7920_DELAY_2 DELAY_NS(200)
+  #define ST7920_DELAY_3 DELAY_NS(0)
 
 //
 // ReprapWorld Graphical LCD
