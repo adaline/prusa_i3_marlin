@@ -141,8 +141,12 @@
 //
 // Průša i3 MK2 Multiplexer Support
 //
+
+// Lets overwrite E_MUX1_PIN, use as FIL_RUNOUT_PIN
+#define FIL_RUNOUT_PIN     16
+
 #define E_MUX0_PIN         17
-#define E_MUX1_PIN         16
+// #define E_MUX1_PIN         16
 #define E_MUX2_PIN         78   // 84 in MK2 Firmware, with BEEPER as 78
 
 //
